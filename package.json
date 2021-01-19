@@ -1,0 +1,40 @@
+{
+  "name": "lp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "gulp browserSync",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://hakuhodoms.backlog.com/git/SHD_GBS_J/marketing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "css-mqpacker": "^7.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-ejs": "^3.1.3",
+    "gulp-headerfooter": "^1.0.3",
+    "gulp-htmlhint": "^2.1.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "iOS 8.1",
+    "Android 4.0"
+  ]
+}
