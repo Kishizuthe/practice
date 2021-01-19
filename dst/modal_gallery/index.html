@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>試作モーダル(カルーセル)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <script src="/js/modal_gallery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <link href="/css/modal_gallery.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>試作モーダル(カルーセル)</h1>
+    <div id="container">
+      <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+        <defs>
+          <symbol id="arrow" viewbox="0 0 90 110">
+            <polygon style="fill:#fff;filter: drop-shadow(0 0 4px #0004);" points="50.46 67.94 37.62 55.09 50.46 42.24 52.59 44.36 41.86 55.09 52.59 65.82 50.46 67.94"></polygon>
+          </symbol>
+          <symbol id="close" viewbox="0 0 44 44">
+            <polygon points="30.21 15.21 28.79 13.79 22 20.59 15.21 13.79 13.79 15.21 20.59 22 13.79 28.79 15.21 30.21 22 23.41 28.79 30.21 30.21 28.79 23.41 22 30.21 15.21"></polygon>
+          </symbol>
+        </defs>
+      </svg>
+      <div class="c_product-thumb_img c_js_show-sample-img" data-img-index="0"><img src="/img/dummy/left.png"></div>
+      <div class="thumbnail-list">
+        <ul>
+          <li class="c_js_show-sample-img" data-img-index="01">
+            <div style="background-image: url(/img/dummy/pic_01.png)"></div>
+          </li>
+          <li class="c_js_show-sample-img" data-img-index="02">
+            <div style="background-image: url(/img/dummy/pic_02.png)"></div>
+          </li>
+          <li class="c_js_show-sample-img" data-img-index="03">
+            <div style="background-image: url(/img/dummy/pic_03.png)"></div>
+          </li>
+          <li class="c_js_show-sample-img" data-img-index="04">
+            <div style="background-image: url(/img/dummy/pic_04.png)"></div>
+          </li>
+          <li class="c_js_show-sample-img" data-img-index="05">
+            <div style="background-image: url(/img/dummy/pic_05.png)"></div>
+          </li>
+          <li class="c_js_show-sample-img" data-img-index="06">
+            <div style="background-image: url(/img/dummy/pic_06.png)"></div>
+          </li>
+          <li class="c_js_show-sample-img" data-img-index="07">
+            <div style="background-image: url(/img/dummy/pic_07.png)"></div>
+          </li>
+          <li class="c_js_show-sample-img" data-img-index="08">
+            <div style="background-image: url(/img/dummy/pic_08.png)"></div>
+          </li>
+          <li class="c_js_show-sample-img" data-img-index="09">
+            <div style="background-image: url(/img/dummy/pic_09.png)"></div>
+          </li>
+          <li class="c_js_show-sample-img" data-img-index="10">
+            <div style="background-image: url(/img/dummy/pic_10.png)"></div>
+          </li>
+        </ul>
+      </div>
+      <div style="height: 100vh;"></div>
+      <div class="modal close">
+        <div class="content">
+          <div class="inner">
+            <div class="prev">
+              <svg viewBox="0 0 90 110">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </div>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div><img src="/img/dummy/left.png"><img src="/img/dummy/right.png"></div>
+                </div>
+                <div class="swiper-slide"><img src="/img/dummy/pic_01.png"></div>
+                <div class="swiper-slide"><img src="/img/dummy/pic_02.png"></div>
+                <div class="swiper-slide"><img src="/img/dummy/pic_03.png"></div>
+                <div class="swiper-slide"><img src="/img/dummy/pic_04.png"></div>
+                <div class="swiper-slide"><img src="/img/dummy/pic_05.png"></div>
+                <div class="swiper-slide"><img src="/img/dummy/pic_06.png"></div>
+                <div class="swiper-slide"><img src="/img/dummy/pic_07.png"></div>
+                <div class="swiper-slide"><img src="/img/dummy/pic_08.png"></div>
+                <div class="swiper-slide"><img src="/img/dummy/pic_09.png"></div>
+                <div class="swiper-slide"><img src="/img/dummy/pic_10.png"></div>
+              </div>
+            </div>
+            <div class="next">
+              <svg viewBox="0 0 90 110">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="close" tabindex="0">
+            <svg viewBox="0 0 44 44">
+              <use xlink:href="#close"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

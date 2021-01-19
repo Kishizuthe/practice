@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c_product-thumb_img
+img {
+  max-height: 280px;
+  max-width: 199px;
+  min-height: 100px;
+}
+
+.thumbnail-list {
+  max-width: 805px;
+  padding: .1px;
+}
+
+.thumbnail-list div {
+  background-size: cover;
+}
+
+.thumbnail-list div::before {
+  display: block;
+  padding-top: 75%;
+  content: "";
+}
+
+.swiper-wrapper {
+  width: 848px;
+}
+
+.active .swiper-wrapper {
+  padding: 1px;
+}
+
+.swiper-slide {
+  background: #000;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-slide > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html.isMode,
+html.isMode body {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: .5s opacity ease-out;
+  transition: .5s opacity ease-out;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.modal:not(.active) {
+  opacity: 0;
+}
+
+.modal:not(.active),
+.modal:not(.active) * {
+  pointer-events: none;
+}
+
+.modal .content {
+  margin: auto;
+  color: #fff;
+  background: #000;
+  position: relative;
+  padding: 44px 0 0;
+}
+
+.modal .content .images li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .content .images li > div {
+  width: 50%;
+}
+
+.modal .content .images li + li {
+  margin-top: 20px;
+}
+
+.modal .content img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.modal .content .close {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.modal .content .close,
+.modal .content .close svg {
+  width: 44px;
+  height: 44px;
+}
+
+.modal .content .close svg {
+  -webkit-filter: drop-shadow(0 0 4px #0004);
+          filter: drop-shadow(0 0 4px #0004);
+  fill: currentColor;
+  display: block;
+}
+
+.modal .content .close::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

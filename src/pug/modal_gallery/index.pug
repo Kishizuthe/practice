@@ -1,0 +1,62 @@
+doctype html
+html(lang='en')
+  head
+    title 試作モーダル(カルーセル)
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js")
+    script(src="/js/modal_gallery.js")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css")
+    link(href="/css/modal_gallery.css" type="text/css" rel="stylesheet")
+
+  body
+    h1 試作モーダル(カルーセル)
+    #container
+      svg(xmlns="http://www.w3.org/2000/svg" style="display:none;")
+        defs
+          symbol#arrow(viewbox="0 0 90 110")
+            polygon(style="fill:#fff;filter: drop-shadow(0 0 4px #0004);" points="50.46 67.94 37.62 55.09 50.46 42.24 52.59 44.36 41.86 55.09 52.59 65.82 50.46 67.94")
+          symbol#close(viewbox="0 0 44 44")
+            polygon(points="30.21 15.21 28.79 13.79 22 20.59 15.21 13.79 13.79 15.21 20.59 22 13.79 28.79 15.21 30.21 22 23.41 28.79 30.21 30.21 28.79 23.41 22 30.21 15.21")
+              
+      .c_product-thumb_img.c_js_show-sample-img(data-img-index="0")
+        img(src='/img/dummy/left.png')
+
+      .thumbnail-list
+        ul
+          - for (var x = 1; x <= 10; x++)
+            - var i = (x <= 9 ? '0' : '')
+            li.c_js_show-sample-img(data-img-index='' + i + x)
+              div(style='background-image: url(/img/dummy/pic_' + i + x + '.png)')
+
+      //- .sample-wrap
+        .prev 前へ
+        .next 次へ
+        .media
+          img
+
+      div(style="height: 100vh;")
+
+      .modal.close
+        .content
+          .inner
+            .prev
+              svg(viewBox="0 0 90 110")
+                use(xlink:href="#arrow")
+            .swiper-container
+              .swiper-wrapper
+                .swiper-slide
+                  div
+                    img(src='/img/dummy/left.png')
+                    img(src='/img/dummy/right.png')
+
+                - for (var x = 1; x <= 10; x++)
+                  - var i = (x <= 9 ? '0' : '')
+                  .swiper-slide
+                    img(src='/img/dummy/pic_' + i + x + '.png')
+
+            .next
+              svg(viewBox="0 0 90 110")
+                use(xlink:href="#arrow")
+
+          .close(tabindex="0")
+            svg(viewBox="0 0 44 44")
+              use(xlink:href="#close")

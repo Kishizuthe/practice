@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.c_product-thumb_img
+  img {
+    max-height: 280px;
+    max-width: 199px;
+    min-height: 100px;
+  }
+
+.thumbnail-list {
+  max-width: 800px;
+  padding: .1px;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px 0 0 -10px;
+    li {
+      width: 140px;
+      margin: 10px 0 0 10px;
+      div {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        &::before {
+          display: block;
+          padding-top: 75%;
+          content: "";
+        }
+      }
+    }
+  }
+  img {
+    max-width: 150px;
+    display: block;
+  }
+}
+
+
+
+.swiper-wrapper {
+  width: 848px;
+  .active & {
+    padding: 1px;
+  }
+}
+.swiper-slide {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-height: 536px;
+  }
+  > div {
+    display: flex;
+  }
+}
+
+
+html.isMode {
+  &,
+  body {
+    overflow: hidden;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,.7);
+  transition: .5s opacity ease-out;
+  &:not(.active) {
+    opacity: 0;
+    &,
+    & * {
+      pointer-events: none;
+    }
+  }
+
+  .content {
+    margin: auto;
+    color: #fff;
+    background: #000;
+    position: relative;
+    padding: 30px 0;
+    max-width: 1026px;
+    .isMode & {
+      right: 10px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+
+    .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .close,
+    .next,
+    .prev {
+      &:hover {
+        opacity: .7;
+        transition: .3s opacity;
+      }
+      svg {
+        filter: drop-shadow(0 0 4px #0004);
+        fill: currentColor;
+        display: block;
+      }
+    }
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      svg {
+        width: 44px;
+        height: 44px;
+      }
+    }
+    .next,
+    .prev {
+      position: relative;
+      z-index: 3;
+
+      &:not([role="button"]) {
+        display: none;
+      }
+      svg {
+        width: 90px;
+        height: 110px;
+      }
+    }
+    .next {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

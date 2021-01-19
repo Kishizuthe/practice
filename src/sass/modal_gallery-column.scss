@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c_product-thumb_img
+  img {
+    max-height: 280px;
+    max-width: 199px;
+    min-height: 100px;
+  }
+
+.thumbnail-list {
+  max-width: 805px;
+  padding: .1px;
+
+  div {
+    background-size: cover;
+    &::before {
+      display: block;
+      padding-top: 75%;
+      content: "";
+    }
+  }
+}
+
+.swiper-wrapper {
+  width: 848px;
+  .active & {
+    padding: 1px;
+  }
+}
+.swiper-slide {
+  background: #000;
+  img {
+    width: 100%;
+  }
+  > div {
+    display: flex;
+  }
+}
+
+
+html.isMode {
+  &,
+  body {
+    overflow: hidden;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  background: rgba(0,0,0,.7);
+  transition: .5s opacity ease-out;
+  z-index: 999;
+  overflow-y: auto;
+  &:not(.active) {
+    opacity: 0;
+    &,
+    & * {
+      pointer-events: none;
+    }
+  }
+
+  .content {
+    margin: auto;
+    color: #fff;
+    background: #000;
+    position: relative;
+    padding: 44px 0 0;
+
+
+    .images {
+      li {
+        display: flex;
+        > div {
+          width: 50%;
+        }
+        + li {
+          margin-top: 20px;
+        }
+      }
+    }
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+
+
+    .inner {
+    }
+    .close {
+      &,
+      svg {
+        width: 44px;
+        height: 44px;
+      }
+      svg {
+        filter: drop-shadow(0 0 4px #0004);
+        fill: currentColor;
+        display: block;
+      }
+      position: fixed;
+      top: 0;
+      right: 0;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      svg {
+      }
+    }
+  }
+}
